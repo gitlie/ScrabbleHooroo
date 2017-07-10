@@ -9,4 +9,9 @@ class ScrabbleTest < Minitest::Test
     assert_instance_of(Scrabble, @name)
   end
 
+  def test_score_method_exists
+    @name = Scrabble.new
+    assert_respond_to(@name, :score)
+  end
+
 end
