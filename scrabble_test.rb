@@ -20,4 +20,9 @@ class ScrabbleTest < Minitest::Test
     assert_send([@name, :score, 'hello'])
   end
 
+  def test_score_method_returns_correct_value
+    assert_equal(8, @name.score('hello'))
+  end
+
+
 end
