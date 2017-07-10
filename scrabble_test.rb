@@ -16,4 +16,8 @@ class ScrabbleTest < Minitest::Test
     assert_respond_to(@name, :score)
   end
 
+  def test_score_method_exepects_string_argument
+    assert_send([@name, :score, 'hello'])
+  end
+
 end

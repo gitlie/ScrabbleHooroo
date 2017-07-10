@@ -1,7 +1,7 @@
 class Scrabble
 
-  def score
-
+  def score(string)
+    string
   end
 
 end
