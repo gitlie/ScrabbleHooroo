@@ -25,5 +25,12 @@ class ScrabbleTest < Minitest::Test
     assert_equal(14, @name.score('cabbage'))
   end
 
+ def test_score_method_to_return_zero_if_argument_is_empty
+   assert_equal(0, @name.score(''))
+ end
+
+ def test_score_method_to_return_zero_if_argument_is_nil
+   assert_equal(0, @name.score(nil))
+ end
 
 end
