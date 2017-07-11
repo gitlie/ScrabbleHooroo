@@ -11,11 +11,15 @@ class Scrabble
     }
 
   def score(string)
+
     return 0 if string.nil? || string.empty?
+
     string.upcase!
+
     string.each_char.inject(0) do |mem, char|
       mem + LETTER_VALUE[char].to_i
+    end
+    
   end
-end
 
 end
